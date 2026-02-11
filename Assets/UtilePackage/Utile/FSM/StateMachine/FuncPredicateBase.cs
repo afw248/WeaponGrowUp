@@ -1,4 +1,4 @@
-﻿namespace SateMachine
+﻿namespace StateMachine
 {
     using System;
 

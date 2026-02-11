@@ -1,8 +1,11 @@
 namespace Command
 {
-    using UnityEngine;
     public interface ICommand<T>
     {
         public void Execute(T actor);
+    }
+    public interface ICommand
+    {
+        public void Execute();
     }
 }
