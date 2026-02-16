@@ -9,6 +9,7 @@ namespace Weapon
     {
         [SerializeField] private AttackStrategy attack;
         [SerializeField] private float coolTime;
+        [SerializeField] private VisualRoot visual;
         public IWeapon CreateWeapon(IVisualRoot visual)
         {
             return new WeaponBilider()

@@ -3,7 +3,10 @@ namespace Agent
     using NotifyValue;
     using Visual;
     using Weapon;
+    public interface IPlayer
+    {
 
+    }
     public class Player : IAgent
     {
         private readonly IWeapon[] _weapons;

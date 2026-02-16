@@ -4,8 +4,7 @@ namespace Agent
     using Weapon;
     using System;
     using Visual;
-
-    public class Enemy : IAgent, IDamageable
+    public class Enemy : IAgent, IDamageable, IDead
     {
         private readonly NotifyValue<int> _health;
         private readonly IVisualRoot _visual;
