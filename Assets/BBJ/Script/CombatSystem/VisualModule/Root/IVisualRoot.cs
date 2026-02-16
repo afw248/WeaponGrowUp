@@ -2,7 +2,7 @@
 {
     public interface IVisualRoot: IReadOnlyVisualRoot
     {
-        public void AttachModule(IVisualModule module);
+        public void AttachModule(VisualActionEnum action, IVisualModule module);
         public void DetachAll();
     }
 }
