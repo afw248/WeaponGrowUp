@@ -2,12 +2,17 @@ namespace Stage
 {
     using UnityEngine;
     using Agent;
+    using Cost;
 
     public class Stage
     {
         private IAgent[] _enemy;
         private IAgent _boss;
-        //보상
+        // 배경
+        // 보상
+        // 작 정보 SO로 분리
+        // 보상은 일단 값으로 입력
+        // 스테이지 정보에서 따로 넣기
 
         public int StageLength { get; private set; }
         public int CurrentIndex { get; private set; }

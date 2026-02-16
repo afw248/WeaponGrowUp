@@ -6,7 +6,7 @@ public abstract class UiBase : MonoBehaviour
 {
     [SerializeField] private float _showTime = 0.2f;
     [SerializeField] private float _hideTime = 0.2f;
-    [SerializeField] private Ease _ease = Ease.OutBack;
+    [SerializeField] private Ease _ease = Ease.Linear;
     private bool isOpen;
     private CanvasGroup _canvasGroup;
     public virtual void Awake()
@@ -17,6 +17,7 @@ public abstract class UiBase : MonoBehaviour
         {
             _canvasGroup.alpha = 0;
             _canvasGroup.blocksRaycasts = false;
+            transform.localScale = new Vector3(1, 0, 1);
         }
     }
     //UiManager에서 Dotween 부분 가지고 오기
@@ -28,7 +29,7 @@ public abstract class UiBase : MonoBehaviour
         _canvasGroup.blocksRaycasts = true;
         RectTransform uirt = _canvasGroup.GetComponent<RectTransform>();
         uirt.SetAsLastSibling();
-        uirt.DOScale(1, _hideTime)
+        uirt.DOScaleY(1, _hideTime)
             .SetEase(_ease).
             SetUpdate(true);
         UiManager.instance.ShowPanel(_canvasGroup.GetComponent<UiBase>());
@@ -37,7 +38,7 @@ public abstract class UiBase : MonoBehaviour
     {
         isOpen = false;
         RectTransform uirt = _canvasGroup.GetComponent<RectTransform>();
-        uirt.DOScale(0, _hideTime)
+        uirt.DOScaleY(0, _hideTime)
             .SetEase(_ease)
             .SetUpdate(true).
             OnComplete(

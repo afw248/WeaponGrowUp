@@ -2,11 +2,24 @@ namespace Stage
 {
     using UnityEngine;
     using Agent;
-
+    using Math = System.Math;
     public class StageManager : MonoBehaviour
     {
-        public Stage _currentStage = new Stage(null,null,0);
+        public StageListSO StageList;
+        private int StageLength;
 
+        private Stage _currentStage;
+        private int _currentIndex;
+        private int Index
+        {
+            get => _currentIndex;
+            set
+            {
+                value = Math.Clamp(value, 0, StageLength);
+                _currentStage = CreateStage(StageList.list[value]);
+                _currentIndex = value;
+            }
+        }
         public IAgent GetCurrentEnemy()
         {
             var stage = _currentStage;
@@ -21,8 +34,12 @@ namespace Stage
             var boss = stage.GetBoss();
             return boss;
         }
-        private void NextStage()
+        public void NextStage() => ++Index;
+
+        private Stage CreateStage(StageInfoSO stageInfoSO)
         {
+
+            return null;
         }
     }
 }
