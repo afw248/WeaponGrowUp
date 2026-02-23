@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TextIcon>k__BackingField: {fileID: 0}
   <Name>k__BackingField: < Diamond = 0 >
+  _cost:
+    _value: 0

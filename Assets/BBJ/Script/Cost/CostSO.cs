@@ -11,11 +11,16 @@ namespace Cost
         [field: SerializeField] public TextIconDataSO TextIcon { get; private set; }
         [field: SerializeField] public string Name { get; private set; }
 
-        private NotifyValue<int> _cost = new NotifyValue<int>(0);
+        [SerializeField]private NotifyValue<int> _cost = new NotifyValue<int>(0);
+
         public int Value
         {
             get => _cost.Value;
-            set => _cost.Value = Math.Clamp(value, 0, int.MaxValue);
+            set
+            {
+                _cost.Value = Math.Clamp(value, 0, int.MaxValue);
+            }
+
         }
         public event Action<int, int> NotifyEvent
         {
@@ -33,11 +38,13 @@ namespace Cost
                 Name = name;
             }
             name = Name;
+
         }
 
         public void Initialize(int value)
         {
-            _cost = new NotifyValue<int>(value);
+            /*cost = new NotifyValue<int>(value);*/
+           Value = value;
         }
         public bool ChackUseable(int value) => _cost.Value >= value;
         public bool TryUseable(int value)
@@ -45,9 +52,13 @@ namespace Cost
             bool canUseable = ChackUseable(value);
 
             if (canUseable)
-                _cost.Value -= value;
+                Value -= value;
+            else
+            {
+                Debug.Log("금액 부족");
+            }
 
-            return canUseable;
+                return canUseable;
         }
         public static implicit operator int(CostSO cost) => cost.Value;
     }
