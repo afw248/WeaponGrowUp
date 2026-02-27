@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d344511a228f14c9510dfe4eadabb2, type: 3}
-  m_Name: AttackSpeed
+  m_Script: {fileID: 11500000, guid: 1710d336787c2474ba2876366b0b0721, type: 3}
+  m_Name: PlayerStatSO
   m_EditorClassIdentifier: 
-  <PopText>k__BackingField: AsUp
-  <Coin>k__BackingField: 1500
-  <AddCoin>k__BackingField: 1000
-  OriginCoin: 1500
+  baseAttack: 0
+  baseAttackSpeed: 0
+  baseCritical: 0
+  isTrigger: 0

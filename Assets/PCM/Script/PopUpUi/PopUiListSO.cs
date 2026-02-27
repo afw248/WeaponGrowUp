@@ -5,13 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PopUiListSO", menuName = "Scriptable Objects/PopUiListSO")]
 public class PopUiListSO : ScriptableObject
 {
-    public List<PopuiSO> popuiSO = new List<PopuiSO>();
+    public List<UpGradeStatSO> popuiSOList = new List<UpGradeStatSO>();
     
     public void CoinReset()
     {
-        for(int i = 0; i < popuiSO.Count; i++)
+        for(int i = 0; i < popuiSOList.Count; i++)
         {
-            popuiSO[i].Coin = popuiSO[i].OriginCoin;
+            popuiSOList[i].Coin = popuiSOList[i].OriginCoin;
         }
     }
 }

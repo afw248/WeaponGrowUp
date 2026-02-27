@@ -15,7 +15,6 @@ public class TextIcon : MonoBehaviour
     }
     public void OnText(int value)
     {
-        Debug.Log("½ÇÇà");
         txt.text = string.Format($"{_iconData.ID}: {value}");
     }
 

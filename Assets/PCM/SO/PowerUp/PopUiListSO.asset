@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PopUiListSO
   m_EditorClassIdentifier: 
   popuiSO:
-  - {fileID: 11400000, guid: 27c9eb053dd3a0949b818657a62e56e8, type: 2}
-  - {fileID: 11400000, guid: 38df9fe704e94d94d8b6f1017972b142, type: 2}
-  - {fileID: 11400000, guid: 864f3c3f6cddd5a42b3412e4f0a55c5b, type: 2}
+  - {fileID: 11400000, guid: b24bded250ce5554997328f355ed1488, type: 2}
+  - {fileID: 11400000, guid: 612f8fc6cbd88f74c9955ba1e42d95d7, type: 2}
+  - {fileID: 11400000, guid: 68657c30799859c4c8d3847d6d186fa0, type: 2}

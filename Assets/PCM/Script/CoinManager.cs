@@ -36,7 +36,6 @@ public class CoinManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             if (costSo != null)
             {
-                // (이전값, 새값) 중 새값(next)만 UnityEvent에 전달
                 costSo.NotifyEvent += (prev, next) => OnCostChanged?.Invoke(next);
             }
         }
@@ -47,30 +46,27 @@ public class CoinManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            Init();
-        }
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             UpGradeReset();
+        }
+        if (Keyboard.current.aKey.wasPressedThisFrame) 
+        {
+            Cost += 1000;
         }
     }
     private void Start()
     {
         OnCostChanged?.Invoke(costSo.Value);
     }
-    public void Updates(int Values)
+    public bool Updates(int Values)
     {
-        costSo.TryUseable(Values);
-    }
-    public void Init() 
-    {
-        PopUpText?.Invoke();
+       bool checkCoin  = costSo.TryUseable(Values);
+       return checkCoin;
     }
     public void UpGradeReset() 
     {
         popUiList.CoinReset();
-        Init();
+        PopUpText?.Invoke();
     }
 }

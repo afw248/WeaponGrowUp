@@ -53,10 +53,6 @@ namespace Cost
 
             if (canUseable)
                 Value -= value;
-            else
-            {
-                Debug.Log("금액 부족");
-            }
 
                 return canUseable;
         }
