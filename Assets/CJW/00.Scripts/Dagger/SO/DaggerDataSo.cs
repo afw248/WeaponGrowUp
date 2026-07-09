@@ -9,7 +9,6 @@ namespace CJW._00.Scripts.Dagger.SO
         public int daggerID;
         public int nextLevel;
         public StatData baseStat;
-        public StatData upgradeStat;
         
         
         [Header("UI Data")]
