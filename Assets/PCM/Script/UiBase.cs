@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class UiBase : MonoBehaviour
 {
-    [SerializeField] private float _showTime = 0.2f;
     [SerializeField] private float _hideTime = 0.2f;
     [SerializeField] private Ease _ease = Ease.Linear;
     private bool isOpen;

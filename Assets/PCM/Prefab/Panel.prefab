@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 7988876509693146364}
   - component: {fileID: 6082949267619708055}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 135831871499375317}
   - component: {fileID: 7462109923460750173}
   m_Layer: 5
-  m_Name: button
+  m_Name: UpGrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 8764052315612190689}
   - component: {fileID: 5902979386627253322}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,9 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: 30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -429,8 +427,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

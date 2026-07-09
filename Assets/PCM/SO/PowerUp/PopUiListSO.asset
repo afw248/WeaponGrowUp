@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94263ad1712d86e4282a69e73ba1b16e, type: 3}
+  m_Name: PopUiListSO
+  m_EditorClassIdentifier: 
+  popuiSO:
+  - {fileID: 11400000, guid: b24bded250ce5554997328f355ed1488, type: 2}
+  - {fileID: 11400000, guid: 612f8fc6cbd88f74c9955ba1e42d95d7, type: 2}
+  - {fileID: 11400000, guid: 68657c30799859c4c8d3847d6d186fa0, type: 2}
